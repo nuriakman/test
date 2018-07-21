@@ -1,5 +1,5 @@
-git config --global user.email "nuriakman@gmail.com"
-git config --global user.name "Nuri Akman"
+git config --global user.email "xxx@gmail.com"
+git config --global user.name "xxx yyy"
 
 sudo apt install apache2
 sudo apt install php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-gd php-mysql php-mbstring php-xml libapache2-mod-php
