@@ -28,6 +28,19 @@ sudo apt install php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-gd php
 sudo apt install mariadb-server
 ```
 
+## MaridDB Kurulum Sonrası Ayarları
+```
+sudo mysql -u root
+  show databases;
+  use mysql;
+  update user set plugin='' where User='root';
+  flush privileges;
+  exit;
+
+sudo mysql_secure_installation
+```
+
+
 ### Servislerin Başlatılması
 ```
 sudo service apache2 restart
@@ -68,8 +81,9 @@ Adres: [Eklenti Sayfası] (https://atom.io/packages/list?direction=desc&sort=sta
 #shift+ctrl+p
 #Settings View:Install Packages and Themes
 #veya: apm install PAKETADI
-
+```
 #apm install file-icons minimap pigments highlight-selected minimap-highlight-selected
 #apm install atom-beautify project-manager autoclose-html highlight-line markdown-pdf
 #apm install project-manager autoclose-html highlight-line markdown-pdf
 #apm install linter linter-php color-picker intentions
+```
