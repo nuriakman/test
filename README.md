@@ -74,6 +74,19 @@ wget -O index.php https://www.adminer.org/latest.php
 sudo add-apt-repository ppa:webupd8team/atom
 sudo apt update
 sudo apt install atom
+# MySQL/MariaDB Root Parolası Sıfırlama
+```
+sudo service mysql stop
+sudo service mariadb stop
+sudo mysqld_safe --skip-grant-tables &
+mysql -u root
+  use mysql;
+  SET PASSWORD FOR 'root'@'localhost' = PASSWORD("YENIPAROLA");
+  flush privileges;
+  quit
+sudo service mysql start
+sudo service mariadb start
+```
 ```
 
 ### Atom Eklentileri Kurulumu
@@ -162,4 +175,24 @@ git push -u origin master
 ## YENİ DOSYALAR EKLENDİĞİNDE
 ```
 git add .
+```
+
+# MySQL/MariaDB Root Parolası Sıfırlama
+```
+sudo service mysql stop
+sudo service mariadb stop
+sudo mysqld_safe --skip-grant-tables &
+mysql -u root
+  use mysql;
+  SET PASSWORD FOR 'root'@'localhost' = PASSWORD("YENIPAROLA");
+  flush privileges;
+  quit
+sudo service mysql start
+sudo service mariadb start
+```
+
+## Apache hangi user ile çalışıyor? sorusunun cevabı
+```
+ps aux | egrep '(apache|httpd)'
+ps -ef | egrep '(httpd|apache2|apache)' | grep -v `whoami` | grep -v root | head -n1 | awk '{print $1}'
 ```
