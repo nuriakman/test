@@ -108,3 +108,58 @@ disable_functions          = exec,passthru,shell_exec,system,proc_open,popen,cur
 
 sudo service apache2 restart
 ```
+
+# WORDPRESS Kurulumu
+```
+cd ~
+wget --no-check-certificate https://wordpress.org/latest.tar.gz
+tar xzvf latest.tar.gz
+mv wordpress /var/www/html/
+cd /var/www/html/wordpress
+cp wp-config-sample.php wp-config.php
+atom wp-config.php
+```
+Atom editör içinde DB_NAME, DB_USER, DB_PASSWORD, DB_HOST Sabitleri tanımlanır.
+
+http://localhost/wordpress adresinden wordpress sitesine girilebilir.
+
+http://localhost/wordpress/wp-admin adresinden wordpress YÖNETİM sayfalarına girilebilir.
+
+
+# Git konusunda genle olarak kullanılacak komutlar
+
+## BİR DEFA YAPILACAK İŞLEMLER
+```
+sudo apt update
+sudo apt upgrade
+sudo apt install git
+git config --global user.email "xxx@gmail.com"
+git config --global user.name "xxx yyy"
+```
+
+## HER BİR PROJEDE BİR DEFA YAPILACAK İŞLEMLER
+```
+git init
+git add .
+git commit -m "first commit"
+git remote add origin git@github.com:KULLANICIADI/PROJEADI.git
+git push -u origin master
+```
+
+## MEVCUT BİR KLASÖRE GİTHUB BAĞLANTISI EKLEME
+```
+git init
+git remote add origin git@github.com:KULLANICIADI/PROJEADI.git
+git push -u origin master
+```
+
+## GÜNLÜK GİT KOMUTLARI LİSTESİ
+```
+git commit -m "first commit"
+git push -u origin master
+```
+
+## YENİ DOSYALAR EKLENDİĞİNDE
+```
+git add .
+```
