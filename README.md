@@ -77,13 +77,34 @@ sudo apt install atom
 ```
 
 ### Atom Eklentileri Kurulumu
+```
 Adres: [Eklenti Sayfası] (https://atom.io/packages/list?direction=desc&sort=stars)
 #shift+ctrl+p
 #Settings View:Install Packages and Themes
 #veya: apm install PAKETADI
-```
 #apm install file-icons minimap pigments highlight-selected minimap-highlight-selected
 #apm install atom-beautify project-manager autoclose-html highlight-line markdown-pdf
 #apm install project-manager autoclose-html highlight-line markdown-pdf
 #apm install linter linter-php color-picker intentions
+```
+
+
+## php.ini ayarları
+```
+sudo find /etc -name "php.ini"
+
+sudo atom /etc/php/7.2/apache2/php.ini
+
+display_startup_errors = On
+display_errors         = On
+upload_max_filesize    = 128M
+upload_max_size        = 128M
+post_max_size          = 128M
+max_input_vars         = 5000
+error_reporting        = E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE & ~E_WARNING
+mbstring.language          = Turkish
+mbstring.internal_encoding = UTF-8
+disable_functions          = exec,passthru,shell_exec,system,proc_open,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source
+
+sudo service apache2 restart
 ```
