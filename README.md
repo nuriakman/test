@@ -129,6 +129,7 @@ wget --no-check-certificate https://tr.wordpress.org/wordpress-4.9.8-tr_TR.tar.g
 tar xzvf wordpress-4.9.8-tr_TR.tar.gz
 mv wordpress /var/www/html/
 cd /var/www/html/wordpress
+sudo chmod -R 777 ../wordpress
 cp wp-config-sample.php wp-config.php
 atom wp-config.php
 ```
