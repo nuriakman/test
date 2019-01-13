@@ -9,8 +9,11 @@ sudo apt upgrade -y
 ## GIT Kurulumu
 ```
 sudo apt install git -y
-git config --global user.email "xxx@gmail.com"
-git config --global user.name "ADINIZ SOYADINIZ"
+git config --global user.email "nuriakman@gmail.com"
+git config --global user.name "Nuri Akman"
+
+git config --global push.default simple
+git push --set-upstream origin master
 ```
 
 ## Apache Kurulumu
@@ -75,18 +78,6 @@ sudo add-apt-repository ppa:webupd8team/atom
 sudo apt update
 sudo apt install atom
 # MySQL/MariaDB Root Parolası Sıfırlama
-```
-sudo service mysql stop
-sudo service mariadb stop
-sudo mysqld_safe --skip-grant-tables &
-mysql -u root
-  use mysql;
-  SET PASSWORD FOR 'root'@'localhost' = PASSWORD("YENIPAROLA");
-  flush privileges;
-  quit
-sudo service mysql start
-sudo service mariadb start
-```
 ```
 
 ### Atom Eklentileri Kurulumu
