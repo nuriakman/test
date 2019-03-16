@@ -18,12 +18,14 @@ git push --set-upstream origin master
 
 ## Apache Kurulumu
 ```
-sudo apt install apache2
+sudo apt install apache2 -y
 ```
 
 ## PHP Kurulumu
 ```
-sudo apt install php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-gd php-mysql php-mbstring php-xml libapache2-mod-php
+sudo add-apt-repository ppa:ondrej/php
+
+sudo apt install php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-gd php-mysql php-mbstring php-xml libapache2-mod-php -y
 ```
 
 ## MaridDB Kurulumu
@@ -61,6 +63,7 @@ sudo chown -R $USER:www-data /var/www/html/
 ## Masaüzerine HTML klasörü kısayolunun açılması
 ```
 cd ~/Masaüstü
+cd ~/Desktop
 ln -s /var/www/html/
 ```
 
@@ -89,7 +92,7 @@ Adres: [Eklenti Sayfası] (https://atom.io/packages/list?direction=desc&sort=sta
 #apm install file-icons minimap pigments highlight-selected minimap-highlight-selected
 #apm install atom-beautify project-manager autoclose-html highlight-line markdown-pdf
 #apm install project-manager autoclose-html highlight-line markdown-pdf
-#apm install linter linter-php color-picker intentions
+#apm install linter linter-php color-picker intentions project-viewer
 ```
 
 
