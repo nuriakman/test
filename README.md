@@ -4,6 +4,7 @@
 ```
 sudo apt update -y
 sudo apt upgrade -y
+sudo apt install vim -y
 ```
 
 ## GIT Kurulumu
@@ -23,14 +24,14 @@ sudo apt install apache2 -y
 
 ## PHP Kurulumu
 ```
-sudo add-apt-repository ppa:ondrej/php
+sudo add-apt-repository ppa:ondrej/php -y
 
 sudo apt install php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-gd php-mysql php-mbstring php-xml libapache2-mod-php -y
 ```
 
 ## MaridDB Kurulumu
 ```
-sudo apt install mariadb-server
+sudo apt install mariadb-server -y
 ```
 
 ## MaridDB Kurulum Sonrası Ayarları
@@ -77,7 +78,7 @@ wget -O index.php https://www.adminer.org/latest.php
 
 ## ATOM Editörü Kurulumu
 ```
-sudo add-apt-repository ppa:webupd8team/atom
+sudo add-apt-repository ppa:webupd8team/atom -y
 sudo apt update
 sudo apt install atom
 # MySQL/MariaDB Root Parolası Sıfırlama
@@ -93,6 +94,15 @@ Adres: [Eklenti Sayfası] (https://atom.io/packages/list?direction=desc&sort=sta
 #apm install atom-beautify project-manager autoclose-html highlight-line markdown-pdf
 #apm install project-manager autoclose-html highlight-line markdown-pdf
 #apm install linter linter-php color-picker intentions project-viewer
+```
+
+
+
+## unetbootin  Kurulumu
+```
+sudo add-apt-repository ppa:gezakovacs/ppa -y
+sudo apt-get update
+sudo apt-get install unetbootin
 ```
 
 
