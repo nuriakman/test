@@ -191,7 +191,7 @@ sudo /etc/init.d/mysql stop
 sudo mysqld_safe --skip-grant-tables &
 mysql -u root
   use mysql;
-  SET PASSWORD FOR 'root'@'localhost' = PASSWORD("YENIPAROLA");
+  SET PASSWORD FOR 'root'@'localhost' = PASSWORD("root");
   flush privileges;
   quit
 sudo /etc/init.d/mysql start
