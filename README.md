@@ -4,7 +4,6 @@
 ```
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install vim -y
 ```
 
 ## GIT Kurulumu
@@ -15,6 +14,11 @@ git config --global user.name "Nuri Akman"
 
 git config --global push.default simple
 git push --set-upstream origin master
+```
+
+## Vim Editorün Kurulumu
+```
+sudo apt install vim -y
 ```
 
 ## Apache Kurulumu
@@ -31,7 +35,7 @@ sudo apt install php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-gd php
 
 ## MaridDB Kurulumu
 ```
-sudo apt install mariadb-server -y
+sudo apt install mariadb-server mariadb-client -y
 ```
 
 ## MaridDB Kurulum Sonrası Ayarları
@@ -42,17 +46,17 @@ sudo mysql -u root
   update user set plugin='' where User='root';
   flush privileges;
   exit;
-
-sudo mysql_secure_installation
 ```
 
 
 ### Servislerin Başlatılması
 ```
-sudo service apache2 restart
-sudo service mariadb restart
-sudo systemctl enable mariadb
-sudo systemctl enable apache2
+sudo /etc/init.d/mysql start
+
+	sudo service apache2 restart
+	sudo service mariadb restart
+	sudo systemctl enable mariadb
+	sudo systemctl enable apache2
 ```
 
 ## html dizini için yetkilendirme
@@ -63,8 +67,7 @@ sudo chown -R $USER:www-data /var/www/html/
 
 ## Masaüzerine HTML klasörü kısayolunun açılması
 ```
-cd ~/Masaüstü
-cd ~/Desktop
+cd ~/Desktop || cd ~/Masaüstü
 ln -s /var/www/html/
 ```
 
@@ -80,20 +83,20 @@ wget -O index.php https://www.adminer.org/latest.php
 ```
 sudo add-apt-repository ppa:webupd8team/atom -y
 sudo apt update
-sudo apt install atom
-# MySQL/MariaDB Root Parolası Sıfırlama
+sudo apt install atom -y
 ```
 
 ### Atom Eklentileri Kurulumu
-```
 Adres: [Eklenti Sayfası] (https://atom.io/packages/list?direction=desc&sort=stars)
-#shift+ctrl+p
-#Settings View:Install Packages and Themes
-#veya: apm install PAKETADI
-#apm install file-icons minimap pigments highlight-selected minimap-highlight-selected
-#apm install atom-beautify project-manager autoclose-html highlight-line markdown-pdf
-#apm install project-manager autoclose-html highlight-line markdown-pdf
-#apm install linter linter-php color-picker intentions project-viewer
+shift+ctrl+p
+Settings View:Install Packages and Themes
+veya: apm install PAKETADI
+
+```
+apm install file-icons minimap pigments highlight-selected minimap-highlight-selected
+apm install atom-beautify project-manager autoclose-html highlight-line markdown-pdf
+apm install project-manager autoclose-html highlight-line markdown-pdf
+apm install linter linter-php color-picker intentions project-viewer
 ```
 
 
@@ -102,7 +105,7 @@ Adres: [Eklenti Sayfası] (https://atom.io/packages/list?direction=desc&sort=sta
 ```
 sudo add-apt-repository ppa:gezakovacs/ppa -y
 sudo apt-get update
-sudo apt-get install unetbootin
+sudo apt-get install unetbootin -y
 ```
 
 
@@ -150,9 +153,9 @@ http://localhost/wordpress/wp-admin adresinden wordpress YÖNETİM sayfalarına 
 ```
 sudo apt update
 sudo apt upgrade
-sudo apt install git
-git config --global user.email "xxx@gmail.com"
-git config --global user.name "xxx yyy"
+sudo apt install git -y
+git config --global user.email "nuriakman@gmail.com"
+git config --global user.name "Nuri Akman"
 ```
 
 ## HER BİR PROJEDE BİR DEFA YAPILACAK İŞLEMLER
@@ -184,16 +187,14 @@ git add .
 
 # MySQL/MariaDB Root Parolası Sıfırlama
 ```
-sudo service mysql stop
-sudo service mariadb stop
+sudo /etc/init.d/mysql stop
 sudo mysqld_safe --skip-grant-tables &
 mysql -u root
   use mysql;
   SET PASSWORD FOR 'root'@'localhost' = PASSWORD("YENIPAROLA");
   flush privileges;
   quit
-sudo service mysql start
-sudo service mariadb start
+sudo /etc/init.d/mysql start
 ```
 
 ## Apache hangi user ile çalışıyor? sorusunun cevabı
