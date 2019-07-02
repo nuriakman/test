@@ -146,7 +146,7 @@ http://localhost/wordpress adresinden wordpress sitesine girilebilir.
 http://localhost/wordpress/wp-admin adresinden wordpress YÖNETİM sayfalarına girilebilir.
 
 
-# Git konusunda genle olarak kullanılacak komutlar
+# Git konusunda genel olarak kullanılacak komutlar
 
 ## BİR DEFA YAPILACAK İŞLEMLER
 ```
