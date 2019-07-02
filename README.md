@@ -132,8 +132,8 @@ sudo service apache2 restart
 # WORDPRESS Kurulumu
 ```
 cd ~
-wget --no-check-certificate https://tr.wordpress.org/wordpress-4.9.8-tr_TR.tar.gz
-tar xzvf wordpress-4.9.8-tr_TR.tar.gz
+wget --no-check-certificate http://wordpress.org/latest.tar.gz
+tar xfz latest.tar.gz
 mv wordpress /var/www/html/
 cd /var/www/html/wordpress
 sudo chmod -R 777 ../wordpress
