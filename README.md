@@ -52,11 +52,10 @@ sudo mysql -u root
 ### Servislerin Başlatılması
 ```
 sudo /etc/init.d/mysql start
-
-	sudo service apache2 restart
-	sudo service mariadb restart
-	sudo systemctl enable mariadb
-	sudo systemctl enable apache2
+sudo service apache2 restart
+sudo service mariadb restart
+sudo systemctl enable mariadb
+sudo systemctl enable apache2
 ```
 
 ## html dizini için yetkilendirme
