@@ -86,10 +86,10 @@ sudo apt install atom -y
 ```
 
 ### Atom Eklentileri Kurulumu
-Adres: [Eklenti Sayfası] (https://atom.io/packages/list?direction=desc&sort=stars)
-shift+ctrl+p
-Settings View:Install Packages and Themes
-veya: apm install PAKETADI
+- Adres: [Eklenti Sayfası](https://atom.io/packages/list?direction=desc&sort=stars)
+- shift+ctrl+p
+- Settings View:Install Packages and Themes
+- veya: apm install PAKETADI
 
 ```
 apm install file-icons minimap pigments highlight-selected minimap-highlight-selected
