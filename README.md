@@ -52,10 +52,8 @@ sudo mysql -u root
 ```
 sudo /etc/init.d/mysql start
 sudo service apache2 restart
-sudo service mariadb restart
 sudo service mysql restart
 sudo systemctl enable mysql
-sudo systemctl enable mariadb
 sudo systemctl enable apache2
 ```
 
