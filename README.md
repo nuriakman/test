@@ -41,7 +41,6 @@ sudo apt install mariadb-server mariadb-client -y
 ## MaridDB Kurulum Sonrası Ayarları
 ```
 sudo mysql -u root
-  show databases;
   use mysql;
   update user set plugin='' where User='root';
   flush privileges;
