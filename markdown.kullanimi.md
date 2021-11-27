@@ -145,7 +145,7 @@ isimt |q..q
 gmail      |a..!+
 ydx.com.tr |a..++
 turkiye    |dr++++
-hm         |dr++
+hm,ffsync  |dr++
 sahib      |q..sc
 insta      |q..ig
 twitt      |q..tw
