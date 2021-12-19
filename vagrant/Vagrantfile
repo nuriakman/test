@@ -1,0 +1,38 @@
+# Kaynak: https://www.thisprogrammingthing.com/2021/Creating-a-PHP-8-Development-Environment-Using-Vagrant-and-Ubuntu-20.04/
+
+# vagrant init ubuntu/trusty64
+# vagrant reload --provision
+# vagrant ssh
+# vagrant halt
+# vagrant up
+# vagrant destroy
+# vagrant global-status --prune
+# vagrant validate
+
+Vagrant.configure("2") do |config|
+  # config.vm.box = "generic/ubuntu2004"
+  config.vm.box = "bento/ubuntu-20.04"
+  config.vm.hostname = "vm1"
+  config.vm.provision :shell, path: "setup/bootstrap.sh"
+  config.vm.network "private_network", ip: "192.168.56.57"
+
+  config.vm.synced_folder ".", "/home/vagrant/"
+
+  config.vm.provision "shell", inline: <<-SHELL
+    apt-get update
+    apt-get install -y lsb-release ca-certificates apt-transport-https software-properties-common 
+    #add-apt-repository ppa:ondrej/php
+    #apt-get update
+    apt-get install -y apache2 mariadb-server mariadb-client php7.4 php-mysql
+    cp setup/development.conf /etc/apache2/sites-available/development.conf
+    a2ensite development.conf
+    a2dissite 000-default.conf 
+    systemctl reload apache2
+
+    echo "create database development" | mysql 
+    echo "CREATE USER 'development'@'localhost' IDENTIFIED BY 'development'" | mysql 
+    echo "GRANT ALL PRIVILEGES ON development.* TO 'development'@'localhost';" | mysql 
+    echo "flush privileges" | mysql 
+  SHELL
+end
+
