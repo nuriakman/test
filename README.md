@@ -158,6 +158,21 @@ mysql -u root
 sudo /etc/init.d/mysql start
 ```
 
+## MySQL Yeni kullanıcı ekleme
+```SQL
+CREATE USER 'dbadmin'@'localhost' IDENTIFIED BY 'dbadmin';
+GRANT ALL PRIVILEGES ON *.* TO 'dbadmin'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+```
+
+## MySQL KULLANCI ŞİFRESİ DEĞİŞTİRME:
+```SQL
+alter user 'root'@'localhost' identified by 'root';
+flush privileges;
+```
+
+
+
 ## Apache hangi user ile çalışıyor? sorusunun cevabı
 ```
 ps aux | egrep '(apache|httpd)'
