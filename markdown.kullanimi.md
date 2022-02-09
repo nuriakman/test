@@ -141,15 +141,15 @@ Başlık-1|Başlık-2
 do         |a..!do
 cf         |a..!cf
 gh         |a..!gh
-isimt |q..q
+isimt      |q..q
 gmail      |a..!+
 ydx.com.tr |a..++
 turkiye    |dr++++
-hm,ffsync  |dr++
+ffsync     |dr++
 sahib      |q..sc
-insta      |q..ig
+insta      |q..ig+
 twitt      |q..tw
-fb         |q..tw
+fb         |q..fb+
 
 
 
