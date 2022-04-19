@@ -135,7 +135,13 @@ YazıYazıYazıYazıYazıYazıYazıYazı.
 | B | 100TL   | 10    |
 | C | 1TL     | 1000  |
 
+
+### Details Örneği (İçeriği gizle/Göster)
+<details>
+<summary>Alt başlıklar</summary>
+
 ### Basit Tablo
+
 Başlık-1|Başlık-2
 --|--
 do         |a..!do
@@ -150,7 +156,21 @@ sahib      |q..sc
 insta      |q..ig+
 twitt      |q..tw
 fb         |q..fb+
+2222       |admin/dr++++
+a.takip    |aslankardesler/7327070
 
+http://portal.uyumsoft.com.tr/  
+TEST Uyumsoft/Uyumsoft
+Aslan4/55p%rEuc
+
+https://servis.turkiye.gov.tr/services/g2g/kdgm/test/uetds?wsdl
+https://servis.turkiye.gov.tr/services/g2g/kdgm/uetds?wsdl
+TEST 999999/999999testtest
+14930/T3ONOB1TWM
+Yarın Yapılacaklar: adminer/adminer.php
+Database: dbadmin/dbAdmin!89..10.  root/dr++++
+
+</details>
 
 
 ### Resim/Görsel
