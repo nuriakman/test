@@ -13,6 +13,7 @@ git config --global user.email "nuriakman@gmail.com"
 git config --global user.name "Nuri Akman"
 
 git config --global push.default simple
+git config --global pull.ff only
 git push --set-upstream origin master
 ```
 
