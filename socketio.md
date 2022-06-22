@@ -5,8 +5,30 @@
 - Kaynak: https://socket.io/get-started/chat
 - git clone https://github.com/socketio/chat-example.git
 
-### CORS
+### CORS on PHP
 - https://socket.io/docs/v4/handling-cors/ CORS header ‘Access-Control-Allow-Origin’ missing
+```PHP
+$http_origin = $_SERVER['HTTP_ORIGIN'];
+
+$allowed_domains = array(
+  'http://domain1.com',
+  'http://domain2.com',
+);
+
+if (in_array($http_origin, $allowed_domains))
+{  
+    header("Access-Control-Allow-Origin: $http_origin");
+}
+```
+veya
+```PHP
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Origin: https://www.example.com');
+```
+
+Kaynaklar:
+- https://devnot.com/2019/cors-nedir/
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 
 ### Örnek
 - https://codesandbox.io/s/socket-io-minimal-example-k3h2l
