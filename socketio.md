@@ -29,6 +29,7 @@ header('Access-Control-Allow-Origin: https://www.example.com');
 Kaynaklar:
 - https://devnot.com/2019/cors-nedir/
 - https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+- https://www.youtube.com/watch?v=ZKEqqIO7n-k&ab_channel=WebDevSimplified  Learn Socket.io In 30 Minutes
 
 ### Örnek
 - https://codesandbox.io/s/socket-io-minimal-example-k3h2l
