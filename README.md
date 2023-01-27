@@ -39,12 +39,10 @@ sudo apt install php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-gd php
 sudo apt install mariadb-server mariadb-client -y
 ```
 
-## MaridDB Kurulum Sonrası Ayarları
+## MaridDB Kurulum Sonrası Root şifresi sıfırlama
 ```
 sudo mysql -u root
-  use mysql;
-  update user set plugin='' where User='root';
-  flush privileges;
+  SET PASSWORD FOR 'root'@'localhost' = PASSWORD("root");
   exit;
 ```
 
