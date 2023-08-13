@@ -1,0 +1,46 @@
+{
+  "yazarlar": [
+    {
+      "id": 1,
+      "isim": "Nuri Akman"
+    },
+    {
+      "id": 2,
+      "isim": "Hasan Yıldız"
+    }
+  ],
+  "kategoriler": [
+    {
+      "id": 1,
+      "kategori": "PHP"
+    },
+    {
+      "id": 2,
+      "kategori": "VUE"
+    },
+    {
+      "id": 3,
+      "kategori": "MySQL"
+    }
+  ],
+  "yazilar": [
+    {
+      "id": 1,
+      "baslik": "Neden PHP ve MYSQL?",
+      "yazar_id": 1,
+      "kategoriler": [1, 3]
+    },
+    {
+      "id": 2,
+      "baslik": "Yükselen Yıldız VUE ve PHP",
+      "yazar_id": 1,
+      "kategoriler": [1, 2]
+    },
+    {
+      "id": 3,
+      "baslik": "Herkesin veritabanı MYSQL",
+      "yazar_id": 2,
+      "kategoriler": [3]
+    }
+  ]
+}
